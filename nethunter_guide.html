@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kali NetHunter Tools Installation Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        h2 {
+            color: #34495e;
+        }
+        .step {
+            background-color: white;
+            border-left: 5px solid #3498db;
+            padding: 15px;
+            margin: 10px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .warning {
+            background-color: #f39c12;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        code {
+            background-color: #ecf0f1;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Kali NetHunter Tools Installation Guide</h1>
+
+    <div class="warning">
+        <strong>Warning:</strong> Installing Kali NetHunter may void your device's warranty and requires technical knowledge. Proceed with caution.
+    </div>
+
+    <h2>What is Kali NetHunter?</h2>
+    <p>Kali NetHunter is a mobile penetration testing platform based on Kali Linux, designed for Android devices.</p>
+
+    <h2>Prerequisites</h2>
+    <ul>
+        <li>A rooted Android device (required for most features)</li>
+        <li>Stable internet connection</li>
+        <li>Basic command line knowledge</li>
+        <li>Full backup of your data</li>
+    </ul>
+
+    <h2>Installation Methods</h2>
+
+    <div class="step">
+        <h3>Method 1: Installation via NetHunter App</h3>
+        <ol>
+            <li>Download the NetHunter APK from the official website: <a href="https://www.kali.org/get-kali/#kali-mobile">kali.org</a></li>
+            <li>Install the APK on your Android device</li>
+            <li>Open the app and follow the installation instructions</li>
+            <li>Install Kali chroots (ARMHF or ARM64 depending on your architecture)</li>
+        </ol>
+    </div>
+
+    <div class="step">
+        <h3>Method 2: Custom ROM (Recommended for full features)</h3>
+        <ol>
+            <li>Check device compatibility on the NetHunter wiki</li>
+            <li>Download the NetHunter ROM for your model</li>
+            <li>Flash the ROM using TWRP or similar tool</li>
+            <li>Perform a factory reset wipe</li>
+            <li>Install the ROM and reboot</li>
+        </ol>
+    </div>
+
+    <h2>Installing Tools</h2>
+
+    <div class="step">
+        <h3>Base Tools</h3>
+        <p>Once NetHunter is installed, open the NetHunter Terminal and run:</p>
+        <code>nh -r</code> (to enter chroot)<br>
+        <code>apt update && apt upgrade</code><br>
+        <code>apt install kali-linux-core</code>
+    </div>
+
+    <div class="step">
+        <h3>Specific Tool Categories</h3>
+        <p>Install specific tool categories:</p>
+        <ul>
+            <li><code>apt install kali-tools-top10</code> - Top 10 tools</li>
+            <li><code>apt install kali-tools-web</code> - Web tools</li>
+            <li><code>apt install kali-tools-wireless</code> - Wireless tools</li>
+            <li><code>apt install kali-tools-passwords</code> - Password tools</li>
+            <li><code>apt install kali-tools-forensics</code> - Forensics tools</li>
+            <li><code>apt install kali-tools-crypto</code> - Crypto tools</li>
+            <li><code>apt install kali-tools-fuzzing</code> - Fuzzing tools</li>
+            <li><code>apt install kali-tools-802-11</code> - 802.11 tools</li>
+            <li><code>apt install kali-tools-bluetooth</code> - Bluetooth tools</li>
+            <li><code>apt install kali-tools-rfid</code> - RFID tools</li>
+            <li><code>apt install kali-tools-sdr</code> - SDR tools</li>
+            <li><code>apt install kali-tools-voip</code> - VoIP tools</li>
+            <li><code>apt install kali-tools-windows-resources</code> - Windows resources</li>
+        </ul>
+    </div>
+
+    <div class="step">
+        <h3>Installing All Tools</h3>
+        <p>To install all available tools:</p>
+        <code>apt install kali-linux-everything</code><br>
+        <p><strong>Note:</strong> This may take a lot of space and time.</p>
+    </div>
+
+    <h2>Additional Configuration</h2>
+    <div class="step">
+        <ol>
+            <li>Configure HID Keyboard for USB injection</li>
+            <li>Install drivers for external adapters (WiFi, Bluetooth)</li>
+            <li>Configure VPN and proxies if needed</li>
+            <li>Update regularly: <code>apt update && apt upgrade</code></li>
+        </ol>
+    </div>
+
+    <h2>Troubleshooting</h2>
+    <ul>
+        <li>If the app crashes, check root permissions</li>
+        <li>For chroot issues, reinstall the chroot</li>
+        <li>Check the official wiki for device-specific issues</li>
+    </ul>
+
+    <p>For more information, visit the <a href="https://www.kali.org/docs/nethunter/">official Kali NetHunter wiki</a>.</p>
+</body>
+</html>
